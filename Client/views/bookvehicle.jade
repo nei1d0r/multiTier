@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  h1.
+    Vehicle List
+  ul
+    table
+      thead
+        th.
+          Type
+        th.
+          Fuel/Transmission
+        th.
+          Price
+      each vehicle, i in vehiclelist
+        tr#vehicle_list_item
+        td. 
+          #{vehicle.type}
+        td.
+          #{vehicle.fuel}
+        td. 
+          #{vehicle.price}
+
+  form#form_add_vehicle(name="booking", method="post", action="/bookvehicle")
+    span First Name
+    span &nbsp;
+    input#input_type(type="text", name="FirstName", value="#{booking.FirstName}")
+    br
+    br
+    span Last Name
+    span &nbsp;
+    input#input_fuel(type="text", name="LastName" value="#{booking.LastName}")
+    br
+    br
+    span Date
+    span &nbsp;
+    input#input_price(type="date", name="Date", required=true)
+    br
+    br
+    span Number of Days
+    span &nbsp;
+    input#input_price(type="number", name="numberOfDays", min=1, max=14, required=true)
+    br
+    br
+    span Type
+    span &nbsp;
+    input#input_price(type="text", name="Type")
+    br
+    br
+    span Fuel/Transmission
+    span &nbsp;
+    input#input_price(type="text", name="Fuel")
+    br
+    br
+    button#submit_booking(type="submit") submit

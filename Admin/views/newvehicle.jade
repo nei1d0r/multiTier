@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h3= title
+  form#form_add_vehicle(name="addVehicle", method="post", action="/addvehicle")
+    span Type
+    span &nbsp;
+    input#input_type(type="text", placeholder="Type", name="Type" required=true)
+    br
+    br
+    span Fuel
+    span &nbsp;
+    input#input_fuel(type="text", placeholder="Fuel/Transmission", name="Fuel" required=true)
+    br
+    br
+    span Price
+    span &nbsp;
+    input#input_price(type="text", placeholder="Price per day", name="Price" required=true)
+    br
+    br
+    button#submit_vehicle(type="submit") submit

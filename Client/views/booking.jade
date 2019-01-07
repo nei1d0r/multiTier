@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h3= title
+  form#form_add_vehicle(name="booking", method="post", action="/booking")
+    span First Name
+    span &nbsp;
+    input#input_type(type="text", placeholder="First Name", name="FirstName", required=true)
+    br
+    br
+    span Last Name
+    span &nbsp;
+    input#input_fuel(type="text", placeholder="Last Name", name="LastName", required=true)
+    br
+    br
+    span Age
+    span &nbsp;
+    input#input_price(type="text", placeholder="Age", name="Age", min=17, required=true)
+    br
+    br
+    span Email
+    span &nbsp;
+    input#input_price(type="email", placeholder="Email", name="Email", required=true)
+    br
+    br
+    button#submit_booking(type="submit") submit

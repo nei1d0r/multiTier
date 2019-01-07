@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  ul
+    li
+      a(href='/vehiclelist') See All Vehicles
+    li
+      a(href='/newvehicle') Add A Vehicle 
+    li
+      a(href='/allbookings') See All Bookings

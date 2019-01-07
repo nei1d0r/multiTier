@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1.
+    Vehicle List
+  ul
+    table
+      thead
+        th.
+          Type
+        th.
+          Fuel/Transmission
+        th.
+          Price Per Day
+        tbody.  
+        each vehicle, i in vehiclelist
+          tr#vehicle_list_item
+          td. 
+            #{vehicle.type}
+          td.
+            #{vehicle.fuel}
+          td. 
+            #{"£"+vehicle.price}
+  
+    a(href="/newvehicle") Add New Vehicle

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1.
+    All Bookings
+  
+  table
+    thead
+      th.
+        First Name
+      th.
+        Last Name
+      th.
+        Type
+      th.
+        Fuel
+      th.
+        Date From
+      th.
+        Days Booked
+    each booking, i in bookedVehicles
+      tr(id=i)
+        td. 
+          #{booking.firstName}
+        td. 
+          #{booking.lastName}
+        td. 
+          #{booking.type}
+        td. 
+          #{booking.fuel}
+        td. 
+          #{booking.date}
+        td. 
+          #{booking.daysBooked}

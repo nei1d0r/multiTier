@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1.
+    Vehicle List
+  ul
+    table
+      thead
+        th.
+          Type
+        th.
+          Fuel/Transmission
+        th.
+          Price
+      each vehicle, i in vehiclelist
+        tr#{i}
+          td. 
+            #{vehicle.type}
+          td.
+            #{vehicle.fuel}
+          td. 
+            #{vehicle.price}
+  p.
+    #{booking.Age}
